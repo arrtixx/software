@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+	    <link rel="stylesheet" href="../styles/style.css"/>
+	    <title>Arrtix_xSoftWare > Web Programs > Text Editor</title>
+	    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    </head>
+    <body onload="init()">
+        <h1 style="font-size: 200%;color:dodgerblue">Text Editor</h1>
+        <textarea cols="90" rows="35" id="t" style="font-size: 130%;"></textarea>
+        <button onclick="clr()" id="c" style="font-size: 130%;color:blue">Clear</button>
+        <button onclick="viw()" id="v" style="font-size: 130%;color:blue">View</button>
+        <input id="fileInput" type="file" style="font-size: 130%;color:gray">
+        <p style="font-size: 130%;color:dodgerblue">Save filename:</p>
+        <textarea id="s" rows="1" cols="30"></textarea>
+        <button onclick="sav()" id="ss" style="font-size:130%;color:blue">Save</button>
+        <script>
+            function viw() {
+                alert(document.getElementById("t").value);
+            }
+            function clr() {
+                document.getElementById("t").value = "";
+            }
+            function init() {
+                document.getElementById("fileInput").addEventListener("chage", handleFileSelect, false);
+            }
+            function handleFileSelect(event) {
+                const reader = new FileReader()
+                reader.onload = handleFileLoad;
+                reader.readAsText(event.target.files[0])
+            }
+            function handleFileLoad() {
+                console.log(event);
+                document.getElementById("t").value = event.target.result;
+            }
+            document.getElementById("ss").addEventListener("click", () => {
+                let valueinput = document.getElementById("t").value
+                let blobdtMIME = 
+                    new Blob([valueinput], { type: "text/plain" })
+                let url = URL.createObjectURL(blobdtMIME)
+                let anele = document.createElement("a")
+                anele.setAttribute("download", document.getElementById("s").value);
+                anele.href = url;
+                anele.click();
+                console.log(blobdtMIME);
+            })
+        </script>
+    </body>
+</html>
