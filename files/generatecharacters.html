@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../styles/style.css"/>
+	<title>Arrtix_xSoftWare > Download > GenerateCharacters</title>
+	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+	<img src="../images/Arrtix_xSoftWare.png" width="300" height="64" onclick="goHome()">
+	<h1 style="font-size: 170%;color: cornflowerblue;">GenerateCharacters</h1>
+    <img src="../images/pylogo.jpeg" alt="Python logo">
+    <div style="font-size: 140%;">
+        <p>Description:</p>
+        <p>🎲This Python program lets you generate random ASCII characters to a file.🆎</p>
+        <ul>Usage:
+            <li style="color:lightslategray">💻Start: generatecharacters.py</li>
+        </ul>
+    </div>
+    <div style="font-size: 150%;">
+        <button style="color:dodgerblue" onclick="downloadFile()">View PY</button>
+        <button style="color:green" onclick="downloadFile2()">Download ZIP</button>
+    </div>
+    <script>
+        function goHome() {
+            window.location.replace("../index.html");
+        }
+        function downloadFile() {
+            let anele = document.createElement("a");
+            anele.href = "../resources/GenerateCharacters.py";
+            anele.setAttribute("download", "GenerateCharacters.py");
+            anele.click();
+        }
+        function downloadFile2() {
+            let anele = document.createElement("a");
+            anele.href = "../resources/GenerateCharacters.zip";
+            anele.setAttribute("download", "GenerateCharacters.zip");
+            anele.click();
+        }
+    </script>
+</body>
+</html>

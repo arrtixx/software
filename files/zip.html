@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../styles/style.css"/>
+	<title>Arrtix_xSoftWare > Download > Zip</title>
+	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+	<img src="../images/Arrtix_xSoftWare.png" width="300" height="64" onclick="goHome()">
+	<h1 style="font-size: 170%;color: cornflowerblue;">Zip</h1>
+    <img src="../images/exefile.jpeg" alt="EXE File Image">
+    <div style="font-size: 140%;">
+        <p>Description:</p>
+        <p>📦This program allows you to compress/extract ZIP archives directly.📂</p>
+        <ul>Usage:
+            <li style="color:lightslategray">📦Compress: zip -compress [folder] [archive.zip]</li>
+            <li style="color:lightslategray">📂Extract: zip -extract [archive.zip] [folder]</li>
+            <li style="color:lightslategray">🔎Help: zip -help</li>
+            <li style="color:red">⚠[Warning: Use ` instead of spaces in filenames!]⚠</li>
+        </ul>
+    </div>
+    <div style="font-size: 150%;">
+        <button style="color:dodgerblue" onclick="downloadZip()">Download EXE</button>
+        <button style="color:green" onclick="downloadZip2()">Download ZIP</button>
+    </div>
+    <script>
+        function goHome() {
+            window.location.replace("../index.html");
+        }
+        function downloadZip() {
+            let anele = document.createElement("a");
+            anele.href = "../resources/zip.exe";
+            anele.setAttribute("download", "zip.exe");
+            anele.click();
+        }
+        function downloadZip2() {
+            let anele = document.createElement("a");
+            anele.href = "../resources/zip.zip";
+            anele.setAttribute("download", "zip.zip");
+            anele.click();
+        }
+    </script>
+</body>
+</html>
