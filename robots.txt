@@ -1,11 +1,1 @@
-Arrtix_xSoftWare
-
-Home: /index.html
-About: /about.html
-Download: /download.html
-About programs: /programs.html
-Web Programs: /webprograms.html
-
-TextEditor: /sites/texteditor.html
-Calculator: /sites/calculator.html
-Randomizer: /sites/randomizer.html
+🤓Erm, actually🤓
